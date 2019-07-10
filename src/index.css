@@ -1,13 +1,81 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+html {
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.no-focus a:focus, .no-focus button:focus, .no-focus input:focus, .no-focus textarea:focus{
+  outline: none;
+}
+
+body {
+  color: #414557;
+  height: 100%;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(6deg, #D9AECC 26%, #6B65B6 78%);
+}
+
+h1{
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.task-input, .task-list{
+  background: rgb(255, 255, 255, 0.9);
+  border-radius: 20px;
+  border: none;
+  margin: 20px;
+  padding: 20px;
+}
+
+.task-input input{
+  background: none;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 2px solid #BCBAC5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  width: 100%;
+}
+.task-input input::placeholder{
+  color: #BCBAC5;
+}
+.task-input input:focus{
+  border-bottom: 2px solid #6372CA;
+  color: #6372CA;
+}
+
+.task-input button{
+  background: #E3DEF0;
+  border-radius: 20px;
+  border: none;
+  color: #6372CA;
+  cursor: pointer;
+  font-weight: bold;
+  padding: 10px 0;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.task-input button:hover{
+  background: #6372CA;
+  color: #E3DEF0;
+  transition: 0.2s;
+}
+
+.task-list ul{
+  list-style: none;
+}
+
+.task-list ul .checkbox:after{
+  background-color: #E3DEF0;
+  border-radius: 5px;
+  border: none;
+  content: "";
+  cursor: pointer;
+  position: absolute;
+  left: 40px;
+  width: 20px;
+  height: 20px;
 }
